@@ -38,7 +38,7 @@ output out_private_subnet_ids {
 output out_public_subnet_ids {
 
     description = "The public subnet IDS in every availability zone of this VPC."
-    value       = aws_subnet.public.*.id
+    value       = aws_subnet.public[*].id
 }
 
 
